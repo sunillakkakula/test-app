@@ -1,21 +1,20 @@
-
-
 import React, { useState, useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 const App = () => {
   const [count, setCount] = useState(() => {
     return 0;
   });
+  // console.log(`count is ${count}`);
+  // console.log(`new count is ${handleIncrement}`);
+  const handleIncrement = () => setCount((currentCount) => currentCount + 1);
+  // console.log(`count is ${currentCount}`);
 
-  const handleIncrement = () => {
-    setCount(count + 1);
-    setCount(count + 1);
-    setCount(count + 1);
-  };
-  const handleDecrement = () => setCount(count - 1);
+  const handleDecrement = () => setCount((currentCount) => currentCount - 1);
 
   // useEffect(() => {
-  console.log("Count :" + count);
+  //   console.log("Using Use Effect Current Count :" + count);
   // }, [count]);
 
   return (
